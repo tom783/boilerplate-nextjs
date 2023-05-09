@@ -4,6 +4,8 @@ import tw, { styled } from 'twin.macro';
 import { createGlobalStyle } from 'styled-components';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { Provider } from 'react-redux';
+import store from '@store/index';
 
 // Create a client
 const queryClient = new QueryClient();
@@ -23,10 +25,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <AppStyle>
-        <QueryClientProvider client={queryClient}>
-          <Component {...pageProps} />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
+        <Provider store={store}>
+          <QueryClientProvider client={queryClient}>
+            <Component {...pageProps} />
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
+        </Provider>
       </AppStyle>
     </>
   );
