@@ -1,0 +1,28 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    "babel-plugin-macros",
+    [
+      "babel-plugin-styled-components",
+      {
+        "fileName": true,
+        "displayName": true,
+        "pure": true,
+        "ssr": true
+      }
+    ]
+  ],
+  "ignore": ["server", "node_modules", "test", "dist", "distserver", "config"],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "transform-remove-console",
+          {
+            "exclude": ["warn", "error", "info"]
+          }
+        ]
+      ]
+    }
+  }
+}
