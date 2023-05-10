@@ -12,23 +12,74 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Boilerplate project 소개
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 목적
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Nextjs 기반 프로젝트를 빠르게 구성하기
 
-## Learn More
+## 구성
 
-To learn more about Next.js, take a look at the following resources:
+- Nextjs 기반 프로젝트로 아래와 같은 구성을 가지고 있다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - Style 관련 : twin.macro (styled-components + tailwindcss)
+  - 비동기 관련 : axios, react-query
+  - global state 관련 : redux, redux-toolkit
+  - dev environment 관련 : prettier, eslint, typescript, storybook, react-query-devtools
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 폴더 구성
 
-## Deploy on Vercel
+```mermaid
+---
+title: Folder tree structure
+---
+classDiagram
+    note for Components "common: 공통 \n pages: 페이지별"
+    class Components {
+        common
+        pages
+    }
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    note for config "project에 대한 설정값"
+    class config {
+        config
+    }
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    note for pages "routing 기준이 되는 페이지들"
+    class pages {
+        pages
+    }
+
+    note for stores "reducers: reudux reducers"
+    class stores {
+        reducers
+    }
+
+    note for styles "global.css: 글로벌 스타일"
+    class styles {
+        globals.css
+    }
+
+    note for types "pages: 페이지별 타입"
+    class types {
+        pages
+    }
+
+    note for utils "api: api관련"
+    class utils {
+        api
+    }
+
+```
+
+## 향후 계획
+
+컴포넌트 추가
+
+- [ ] 탭
+- [ ] 테이블
+- [ ] 아이콘
+- [ ] 버튼
+- [ ] 드롭다운
+- [ ] 셀렉터
+- [ ] 텍스트 인풋
