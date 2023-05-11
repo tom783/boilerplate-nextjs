@@ -12,6 +12,16 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Second, run the storybook server:
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
+
 # Boilerplate project 소개
 
 ## 목적
@@ -72,6 +82,13 @@ classDiagram
 
 ```
 
+## Git commit message type
+
+- feat: 새로운 기능 추가
+- fix: "잘못된" 코드 수정
+- update: "정상적인" 기존 기능 개선 및 추가
+- dev: 개발 환경 관련
+
 ## 향후 계획
 
 컴포넌트 추가
@@ -79,7 +96,7 @@ classDiagram
 - [ ] 탭
 - [ ] 테이블
 - [ ] 아이콘
-- [ ] 버튼
+- [x] 버튼
 - [ ] 드롭다운
 - [ ] 셀렉터
 - [ ] 텍스트 인풋
