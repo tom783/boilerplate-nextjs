@@ -15,7 +15,7 @@
     "node": true,
     "jest": true
   },
-  "ignorePatterns": [".eslintrc.js", "docker/*", "**/*.spec.ts", "dist/*", "node_modules/*", "test/*"],
+  "ignorePatterns": [".eslintrc.js", "docker/*", "**/*.spec.ts", "dist/*", "node_modules/*", "test/*", "next.config.js", ".storybook/*"],
   "rules": {
     "prettier/prettier": "warn",
     "arrow-body-style": "off",
