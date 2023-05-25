@@ -17,6 +17,7 @@
   },
   "ignorePatterns": [".eslintrc.js", "docker/*", "**/*.spec.ts", "dist/*", "node_modules/*", "test/*"],
   "rules": {
+    "prettier/prettier": "warn",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "semi-spacing": ["error"],
